@@ -1,0 +1,91 @@
+.calcFieldWrapper {
+    grid-area: calc ;
+}
+.numButtonWrapper{
+    grid-area: numbutton;
+}
+
+.operButtonWrapper{
+    grid-area: operbutton;
+
+}
+
+#container {
+    display: grid;
+    justify-items: stretch;
+    justify-content: start;
+    grid-auto-flow: column;
+    grid-template-rows: auto;
+    grid-template-areas: 'calc calc'
+                        'numbutton operbutton';
+}
+
+div.calcFieldWrapper {
+    border-radius: 25px;
+    padding: 10px;
+    width: fit-content;
+    max-width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    background: blue;
+    overflow-wrap: break-word;
+    margin: 10px;    
+}
+
+#calcField{
+    border-radius: 25px;
+    width: 440px;
+    height: fit-content;
+    flex-grow: 1;
+    background: lightgray;
+    margin: 10px;
+    font-size: 40px;
+}
+
+div.numButtonWrapper {
+    border-radius: 25px;
+    padding: 10px;
+    width: calc((60px + (10px * 2)) * 3); /* item width + padding on either side times number of items */
+    display: flex;
+    flex-wrap: wrap;
+    background: blue;
+    margin: 10px;
+  }
+  
+div.Numerical {
+    border-radius: 25px;
+    width: 60px;
+    height: 60px;
+    flex-grow: 1;
+    background: lightgray;
+    margin: 10px;
+    font-size: 40px;
+    text-align: center;
+  }
+  div.Numerical:hover{
+    background: azure;
+  }
+
+  div.Operators:hover{
+    background: azure;
+  }
+  div.operButtonWrapper {
+    border-radius: 25px;
+    padding: 10px;
+    width: calc((60px + (10px * 2)) * 2); /* item width + padding on either side times number of items */
+    display: flex;
+    flex-wrap: wrap;
+    background: blue;
+    margin: 10px;
+  }
+  
+div.Operators {
+    border-radius: 25px;
+    width: 60px;
+    height: 60px;
+    flex-grow: 1;
+    background: lightgray;
+    margin: 10px;
+    font-size: 40px;
+    text-align: center;
+  }
